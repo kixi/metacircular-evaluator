@@ -60,5 +60,12 @@
   (let [env stdenv]
     (loop []
       (print "kathi> ")
+      (flush)
       (println (meval (read) env))
       (recur))))
+
+(defn -main [& args]
+  (println "KATHI")
+  (println "*********************************")
+  (println "Metacircular Evaluator in Clojure")
+  (mrepl))
